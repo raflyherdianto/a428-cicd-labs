@@ -1,7 +1,9 @@
 node {
+    stage('Checkout') {
+        checkout scm
+    }
     stage('Build') {
-        sh './jenkins/scripts/build.sh'
-        // sh 'npm install'
+        sh 'npm install'
     }
     stage('Test') {
         sh './jenkins/scripts/test.sh'
