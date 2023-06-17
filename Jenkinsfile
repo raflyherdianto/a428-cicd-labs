@@ -1,8 +1,9 @@
 Node {
     stage('Build') {
-        sh 'npm install' 
+        git '/home/a428-cicd-labs'
+        sh 'npm install'
     }
     stage('Test') {
-        sh './jenkins/scripts/test.sh' 
+        sh './jenkins/scripts/test.sh'
     }
 }
