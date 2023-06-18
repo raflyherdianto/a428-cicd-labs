@@ -10,7 +10,7 @@ node {
             input message: 'Lanjutkan ke tahap Deploy?'
         }
         stage('Deploy') {
-            sh './jenkins/scripts/deploy.sh'
+            sh './jenkins/scripts/deliver.sh'
             sleep(time: 1, unit: 'MINUTES')
         }
     }
